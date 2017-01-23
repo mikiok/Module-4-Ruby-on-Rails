@@ -1,0 +1,13 @@
+<%= flash[:alert] %>
+
+<%= form_for [@user, @product, @bid] do |f| %>
+
+	<%= f.label :amount %>
+	<%= f.number_field :amount %>
+
+	<%= f.label :email_address %>
+	<%= f.text_field :email_address %>
+
+	<%= f.button %>
+
+<% end %>

@@ -1,0 +1,15 @@
+<h1>This is the Users' list</h1>
+
+<%= flash[:notice] %>
+<ul>
+	<% @users.each do |user| %>
+		<li>
+			<strong> Name: </strong><%= user.name %>
+			<strong> Email address: </strong><%= user.email_address %>
+			<%= link_to('Show', user_path(user)) %>
+
+			<%= link_to('Delete', user_path(user),
+			method: :delete, data: { confirm: 'Are you sure?' }) %>
+		</li>
+	<% end %>
+</ul>
