@@ -1,0 +1,7 @@
+<h1>
+	<%= @project.id %>	
+	<%= @project.name %>
+</h1>
+Description: <%= @project.description %>
+
+<%= image_tag @project.logo.url(:medium)%>
