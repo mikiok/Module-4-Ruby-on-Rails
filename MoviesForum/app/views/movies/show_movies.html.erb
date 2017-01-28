@@ -1,0 +1,11 @@
+<h1>These are the films</h1>
+
+<ul>
+	<% @movies.each do |movie| %>
+		<li>
+			<strong> Name: </strong><%= movie.title %>
+			<img src=movie.poster alt="Poster" height="42" width="42">
+			<%= link_to "Start a discussion", "movies/#{movie.title}" %>
+		</li>
+	<% end %>
+</ul>

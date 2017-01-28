@@ -1,0 +1,8 @@
+<%= flash[:alert] %>
+
+
+<%= form_tag("/movies", method: "post") do %>
+  <%= label_tag(:movie_name, "Search for:") %>
+  <%= text_field_tag(:movie_name) %>
+  <%= submit_tag("Search") %>
+<% end %>
